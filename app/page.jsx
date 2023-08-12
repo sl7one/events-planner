@@ -14,6 +14,8 @@ import { FiFilter } from "react-icons/fi";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 import Select from "./components/Select/Select";
 import AddBtn from "./components/AddButton/AddButton";
+import Card from "./components/Card/Card";
+import axios from "axios";
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -25,14 +27,13 @@ export default function Home() {
           "https://64c88fa6a1fe0128fbd5e8b1.mockapi.io/events"
         );
         setData(data);
-        console.log(data)
+        // console.log(data)
       } catch (error) {
-        console.log(error.message)
+        console.log(error.message);
       }
     };
     getEvents();
   }, []);
-
 
   const categoryList = [
     { value: "art", label: "art" },
@@ -113,20 +114,22 @@ export default function Home() {
   );
 
   return (
-    <MainBg>
-      <Container>
-        <BarWrapper>
-          <BarTitle>My events</BarTitle>
-          <Select options={categoryList} holder={categoryHolder} />
-          <Select options={sortList} holder={sortHolder} />
-          <AddBtn />
-        </BarWrapper>
-        <CardsWrap>
-          {data.map(obj => (
-            <Card card={obj} key={obj.id} />
-          ))}
-        </CardsWrap>
-      </Container>
-    </MainBg>
+    <main>
+      <MainBg>
+        <Container>
+          <BarWrapper>
+            <BarTitle>My events</BarTitle>
+            <Select options={categoryList} holder={categoryHolder} />
+            <Select options={sortList} holder={sortHolder} />
+            <AddBtn />
+          </BarWrapper>
+          <CardsWrap>
+            {data.map(obj => (
+              <Card card={obj} key={obj.id} />
+            ))}
+          </CardsWrap>
+        </Container>
+      </MainBg>
+    </main>
   );
 }

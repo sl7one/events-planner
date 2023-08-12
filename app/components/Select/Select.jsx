@@ -1,6 +1,5 @@
-import { SelectInput } from './Select.styled';
-const Select = ({options,holder}) => {
-  
+import { SelectInput } from "./Select.styled";
+const Select = ({ options, holder }) => {
   return (
     <SelectInput
       classNamePrefix="Filter"

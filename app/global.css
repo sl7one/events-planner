@@ -1,6 +1,4 @@
-@import-normalize; /* bring in normalize.css styles */
-@import url("https://fonts.googleapis.com/css2?family=Alata&family=Poppins:wght@400;500;600&display=swap");
-
+/* @import url("https://fonts.googleapis.com/css2?family=Alata&family=Poppins:wght@400;500;600&display=swap"); */
 
 :root {
   --main-blue: #7b61ff;
@@ -11,6 +9,10 @@
   --main-black: #3f3f3f;
   --main-gray: #aca7c3;
   --main-white: #ffffff;
+}
+
+*{
+  box-sizing: border-box;
 }
 
 
