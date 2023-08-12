@@ -12,9 +12,9 @@ import {
 import { BiSliderAlt } from "react-icons/bi";
 import { FiFilter } from "react-icons/fi";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
-import Select from "./components/Select/Select";
-import AddBtn from "./components/AddButton/AddButton";
-import Card from "./components/Card/Card";
+import Select from "../components/Select/Select";
+import AddBtn from "../components/AddButton/AddButton";
+import Card from "../components/Card/Card";
 import axios from "axios";
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
           "https://64c88fa6a1fe0128fbd5e8b1.mockapi.io/events"
         );
         setData(data);
-        // console.log(data)
+        console.log(data)
       } catch (error) {
         console.log(error.message);
       }
